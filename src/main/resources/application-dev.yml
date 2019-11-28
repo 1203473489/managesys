@@ -1,0 +1,18 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    username: devaccount
+    password: MyNewPass4!
+    url: jdbc:mysql://112.125.88.191:3306/wangzhendatabase?characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  type-aliases-package: com.blue.managesys.entity
+  mapper-locations: classpath*:mappering/*.xml
+#showsql
+logging:
+  level:
+    com:
+      blue:
+        mapper: debug
+
