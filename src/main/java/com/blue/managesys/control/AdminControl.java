@@ -35,7 +35,8 @@ public class AdminControl {
         if (adminUserEntity!=null){
             adminUserMapper.insertAdminUser(adminUserEntity);
             return "success";
+        }else{
+            return "error";
         }
-        return "error";
     }
 }
