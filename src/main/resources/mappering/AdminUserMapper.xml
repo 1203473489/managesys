@@ -16,4 +16,8 @@
     <insert id="insertAdminUser" parameterType="com.blue.managesys.entity.AdminUserEntity">
         insert into admin_user values(#{adminId},#{adminName},#{adminNo},#{createTime},#{loginPass},#{departNo},#{status})
     </insert>
+
+    <select id="getAdminUser" parameterType="com.blue.managesys.entity.AdminUserEntity" resultMap="adminmapper">
+        select  ADMIN_ID,ADMIN_NO,ADMIN_NAME,depart_no,status,create_time  from admin_user where ADMIN_ID=#{adminId}
+    </select>
 </mapper>

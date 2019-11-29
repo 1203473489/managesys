@@ -9,6 +9,12 @@ import org.springframework.stereotype.Service;
 public class AdminServiceImpl  {
     @Autowired
     private AdminUserMapper adminUserMapper;
+
+    /**
+     * 注册
+     * @param adminUserEntity
+     * @return
+     */
     public boolean registAdmin(AdminUserEntity adminUserEntity) {
         int res = adminUserMapper.insertAdminUser(adminUserEntity);
         if (res!=0){
@@ -16,5 +22,9 @@ public class AdminServiceImpl  {
         }else {
             return false;
         }
+    }
+    public AdminUserEntity adminLogin(AdminUserEntity adminUserEntity) throws Exception {
+        AdminUserEntity ae = adminUserMapper.getAdminUser(adminUserEntity);
+        return ae;
     }
 }
