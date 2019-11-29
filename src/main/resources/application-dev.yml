@@ -14,5 +14,6 @@ logging:
   level:
     com:
       blue:
-        mapper: debug
+        managesys:
+          mapper: DEBUG
 
