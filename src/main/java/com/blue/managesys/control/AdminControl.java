@@ -40,7 +40,7 @@ public class AdminControl {
             return "error";
         }
     }
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = {RequestMethod.POST, RequestMethod.GET})
     public AdminUserEntity login(AdminUserEntity adminUserEntity) throws Exception {
         AdminUserEntity ad = service.adminLogin(adminUserEntity);
         return ad;
